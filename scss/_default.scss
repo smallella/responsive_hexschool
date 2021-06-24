@@ -1,0 +1,65 @@
+//fontsize
+$font-size-16:16px;
+$font-size-20:20px;
+$font-size-24:24px;
+$font-size-28:28px;
+$font-size-48:48px;
+//bgc
+$color-brown:#3D1101;
+$color-lightbrown:#EfE9E7;
+$color-lightwhite:rgba(250,250,250,0.70);
+$color-orange:#FF5E45;
+//breakpoint
+@mixin pc{
+    @media(max-width:1024px){
+        @content;
+    }
+}
+@mixin pad{
+    @media(max-width:767px){
+        @content;
+    }
+}
+@mixin phone{
+    @media(max-width:568px){
+        @content;
+    }
+}
+.display-none-pc{
+    display: none;
+    @include phone(){
+        display: block;
+    }
+}
+.display-none-phone{
+    @include phone(){
+        display: none;
+    }
+}
+//tag default
+.container{
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 50px 10px;
+	@include pad(){
+		max-width: 768px;
+	}
+	@include phone(){
+		max-width: 375px;
+		padding: 50px 10px;
+	}
+}
+h1,h2,h3,h4,h5,h6,p,a{
+	line-height: 1.5;
+}
+a{
+	text-decoration: none;
+}
+span.label{
+	line-height:1.3;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+

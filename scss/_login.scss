@@ -1,0 +1,96 @@
+.login{
+    color: $color-brown;
+    background-color: $color-lightbrown;
+    .hexLogo{
+            width: 240px;
+            height: 50px;
+            background: url("../assets/logo_l@svg.svg") no-repeat left;
+            display: block;
+            margin: 0 auto 6px;
+    }
+    p{
+        font-size: $font-size-20;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .loginForm{
+        background-color: $color-lightbrown;
+        width: 30%;
+        margin: 0 auto;
+        padding: 15px;
+        box-shadow: 3px 3px 4px 0px rgb(0,0,0,0.2);
+        border-top: 3px solid $color-orange;
+        @include pad(){
+            width: 40%;
+        }
+        @include phone(){
+            width: 80%;
+        }
+        h3{
+            font-size: $font-size-20;
+            font-weight: bold;
+            text-align: center;
+        }
+        label,input{
+            display: block;
+        }
+        label{
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        input{
+            color: $color-brown;
+            width: 85%;
+            padding: 10px;
+            border-radius: 3px;
+            padding-left: 30px;
+            border: 2px solid rgba(128, 128, 128, 0.5);
+            margin-bottom: 5px;
+            text-indent: 1px;
+        }
+        a{
+            color: $color-orange;
+            &:hover{
+                font-weight: bold;
+            }
+        }
+        .email,.password{
+            position: relative;
+        }
+        .fa-envelope,.fa-lock{
+            color: rgb(85, 58, 42);
+            position: absolute;
+            top: 30px;
+            left: 10px;
+        }
+        .button{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            a{
+                text-align: center;
+                display: block;
+                width: 46%;
+                color: #fff;
+                border-radius: 3px;
+                padding: 6px 0;
+                border-bottom: 2px solid transparent;
+            }
+            .register{
+                background: rgba(0,0,0,0.35);
+                &:hover{
+                    border-bottom: 1px solid $color-brown;
+                    background: rgba(0, 0, 0, 0.20);
+                }
+            }
+            .login{
+                background: $color-orange;
+                &:hover{
+                    border-bottom: 1px solid $color-brown;
+                    background: rgba(233, 99, 10, 0.9);
+                }
+            }
+        }
+    }
+}
